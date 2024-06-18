@@ -1,5 +1,11 @@
+import SwipperHome from "../components/SwipperHome";
+
 const Home = () => {
-  return <h1>The home</h1>;
+  return (
+    <div>
+      <SwipperHome />
+    </div>
+  );
 };
 
 export default Home;
