@@ -3,7 +3,12 @@ import { Checkbox } from "@/modules/shared/components/ui/checkbox";
 import { Input } from "@/modules/shared/components/ui/input";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import loginImage from "@/assets/login_shirt.png";
-import clsx from "clsx";
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+} from "@/modules/shared/components/ui/tabs";
+import LoginForm from "../components/login/login-form";
 
 const Login = () => {
   return (
@@ -21,45 +26,16 @@ const Login = () => {
             <Button variant="outline" size="icon">
               <GitHubLogoIcon className="h-4 w-4" />
             </Button>
+
+            <Tabs defaultValue="customer">
+              <TabsList>
+                <TabsTrigger value="customer">Comprador</TabsTrigger>
+                <TabsTrigger value="store">Vendedor</TabsTrigger>
+              </TabsList>
+            </Tabs>
           </div>
 
-          <form className="space-y-3 mb-3">
-            <div className="grid grid-cols-2 gap-3">
-              <Input placeholder="Nombre" />
-              <Input placeholder="Apellido" />
-            </div>
-            <Input placeholder="Email" />
-            <Input type="password" placeholder="Contraseña" />
-
-            <div className="flex items-center space-x-2">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-xs text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Me gustaria recibir las últimas ofertas y novedades
-              </label>
-            </div>
-
-            <div className="flex items-center space-x-2">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-xs text-gray-500 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                He leído y acepto los{" "}
-                <a href="#" className="underline underline-offset-2">
-                  Términos y condiciones{" "}
-                </a>
-                y las{" "}
-                <a href="#" className="underline underline-offset-2">
-                  Politicas de Privacidad
-                </a>
-              </label>
-            </div>
-
-            <Button>Registrarme</Button>
-          </form>
+          <LoginForm />
 
           <p className="text-xs">
             ¿Ya tienes una cuenta?{" "}
