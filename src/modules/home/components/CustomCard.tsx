@@ -3,7 +3,7 @@ const CustomCard = () => {
   return (
     <>
       <div className=" w-full">
-        <div className="flex flex-col items-center justify-center bg-purple-500 text-white h-screen">
+        <div className="flex flex-col items-center justify-center bg-main text-white h-screen">
           <div className="text-center mb-6">
             <h1 className="text-3xl font-bold mb-2">
               Crea tus productos personalizados
