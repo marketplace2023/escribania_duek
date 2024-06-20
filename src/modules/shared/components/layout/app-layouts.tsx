@@ -5,7 +5,7 @@ import FooterMenu from "./footer-menu";
 
 const AppLayout = () => {
   return (
-    <div className="open-sans-400">
+    <div className="inter-400">
       <div className="container">
         <TopSearchBar />
 
