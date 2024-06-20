@@ -19,3 +19,10 @@ export const registerFormSchema = z.object({
 });
 
 export type RegisterFormSchema = z.infer<typeof registerFormSchema>;
+
+export const loginFormSchema = z.object({
+  email: z.string().email("Ingrese un email válido"),
+  password: z.string().min(8, "La contraseña debe tener mínimo 8 caracteres"),
+});
+
+export type LoginFormSchema = z.infer<typeof loginFormSchema>;
