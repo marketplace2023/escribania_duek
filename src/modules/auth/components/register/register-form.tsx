@@ -14,9 +14,22 @@ import {
   FormField,
   FormItem,
 } from "@/modules/shared/components/ui/form";
+import { useMutation } from "@tanstack/react-query";
+import { register } from "../../api/auth";
+import { v4 } from "uuid";
+import { handleFormError } from "@/modules/shared/util/handle-form-error";
 
 const RegisterForm = () => {
-  // const registerMutation =
+  const registerMutation = useMutation({
+    mutationFn: register,
+    onSuccess: () => {
+      // redirect to login
+      alert("Registro exitoso");
+    },
+    onError: handleFormError((key: any, message) =>
+      form.setError(key, { message })
+    ),
+  });
 
   const form = useForm<RegisterFormSchema>({
     resolver: zodResolver(registerFormSchema),
@@ -29,7 +42,10 @@ const RegisterForm = () => {
   });
 
   const onSubmit = (values: RegisterFormSchema) => {
-    console.log(values);
+    registerMutation.mutate({
+      id: v4(),
+      ...values,
+    });
   };
 
   return (
@@ -127,7 +143,9 @@ const RegisterForm = () => {
           />
         </div>
 
-        <Button type="submit">Registrarme</Button>
+        <Button type="submit" isLoading={registerMutation.isPending}>
+          Registrarme
+        </Button>
       </form>
     </Form>
   );
