@@ -14,15 +14,17 @@ import {
   FormItem,
 } from "@/modules/shared/components/ui/form";
 import { useMutation } from "@tanstack/react-query";
-import { login } from "../../api/auth";
+import { login as loginToApi } from "../../api/auth";
 import { handleFormError } from "@/modules/shared/util/handle-form-error";
+import { useAuth } from "../../context/auth-context";
 
 const LoginForm = () => {
+  const { login } = useAuth();
+
   const loginMutation = useMutation({
-    mutationFn: login,
-    onSuccess: () => {
-      // redirect to home or profile
-      alert("Sesión iniciada");
+    mutationFn: loginToApi,
+    onSuccess: (authInfo) => {
+      login(authInfo);
     },
     onError: handleFormError((key: any, message) =>
       form.setError(key, { message })
