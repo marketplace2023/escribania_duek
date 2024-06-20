@@ -6,7 +6,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/modules/shared/components/ui/tabs";
-import RegisterForm from "../components/register/register-form";
+import RegisterForm from "../components/forms/register-form";
 import { Link } from "react-router-dom";
 import AuthTitleSection from "../components/ui/auth-title-section";
 
