@@ -1,6 +1,4 @@
 import { Button } from "@/modules/shared/components/ui/button";
-import { Checkbox } from "@/modules/shared/components/ui/checkbox";
-import { Input } from "@/modules/shared/components/ui/input";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import loginImage from "@/assets/login_shirt.png";
 import {
@@ -8,9 +6,9 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/modules/shared/components/ui/tabs";
-import LoginForm from "../components/login/login-form";
+import RegisterForm from "../components/register/register-form";
 
-const Login = () => {
+const Register = () => {
   return (
     <div className="container">
       <div className="grid grid-cols-2">
@@ -35,7 +33,7 @@ const Login = () => {
             </Tabs>
           </div>
 
-          <LoginForm />
+          <RegisterForm />
 
           <p className="text-xs">
             ¿Ya tienes una cuenta?{" "}
@@ -74,4 +72,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
