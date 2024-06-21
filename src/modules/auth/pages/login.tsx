@@ -37,7 +37,7 @@ const Login = () => {
 
       <p className="text-xs">
         ¿No tienes una cuenta?{" "}
-        <Link to="/register" className="text-primary font-semibold">
+        <Link to="/registro" className="text-primary font-semibold">
           Registrate
         </Link>
       </p>
