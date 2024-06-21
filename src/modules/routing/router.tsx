@@ -10,6 +10,7 @@ import Register from "@/modules/auth/pages/register";
 import Login from "../auth/pages/login";
 import GuestOnlyRoute from "./components/guest-only-route";
 import ShippingInfo from "../shipping-info/pages/shipping-info";
+import Products from "../products/pages/products";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ export const router = createBrowserRouter(
       <Route path="/" element={<AppLayout />}>
         <Route path="" element={<Home />} />
         <Route path="/envios" element={<ShippingInfo />} />
+        <Route path="/comprar" element={<Products />} />
 
         <Route path="" element={<AuthLayout />}>
           <Route path="registro" element={<Register />} />
