@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const TopNavigationBar = () => {
   return (
     <div className="flex items-center justify-center flex-shrink-0 space-x-16 pt-6 pb-8">
@@ -7,9 +9,9 @@ const TopNavigationBar = () => {
       <a href="#" className="text-md">
         Productos
       </a>
-      <a href="#" className="text-md">
+      <Link to="/envios" className="text-md">
         Envío
-      </a>
+      </Link>
       <a href="#" className="text-md">
         Ofertas
       </a>
