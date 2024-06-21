@@ -17,7 +17,7 @@ export const router = createBrowserRouter(
         <Route path="" element={<Home />} />
 
         <Route path="" element={<AuthLayout />}>
-          <Route path="register" element={<Register />} />
+          <Route path="registro" element={<Register />} />
           <Route
             path="login"
             element={<GuestOnlyRoute element={<Login />} />}
