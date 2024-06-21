@@ -4,6 +4,11 @@ import { PiHandbagSimple } from "react-icons/pi";
 import { GoPencil } from "react-icons/go";
 import { IoHomeOutline, IoShirtOutline } from "react-icons/io5";
 
+interface CategoryProps {
+  name: string;
+  icon: JSX.Element;
+}
+
 const categories = [
   { id: 1, name: "Electrónica", icon: <CiMonitor /> },
   { id: 2, name: "Tazas", icon: <BsCup /> },
@@ -13,20 +18,20 @@ const categories = [
   { id: 6, name: "Ropa", icon: <IoShirtOutline /> },
 ];
 
-const CustomCategorites = ({ name, icon }) => {
+const CustomCategory: React.FC<CategoryProps> = ({ name, icon }) => {
   return (
-    <div className="flex flex-col items-center justify-center  content-center w-40 h-40 rounded-lg bg-gray-50 shadow-md p-4 text-center m-2">
-      <div className="text-4xl text-main mb-2">{icon}</div>
+    <div className="flex flex-col items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-lg bg-gray-50 shadow-md p-4 text-center m-2">
+      <div className="text-3xl md:text-4xl text-main mb-2">{icon}</div>
       <div className="text-sm text-gray-800">{name}</div>
     </div>
   );
 };
 
-const App = () => {
+const CustomCategoriesList = () => {
   return (
-    <div className="flex flex-wrap justify-center content-center w-1/2 gap-4 p-8">
+    <div className="flex flex-wrap justify-center w-full lg:w-1/2 gap-4 p-4">
       {categories.map((category) => (
-        <CustomCategorites
+        <CustomCategory
           key={category.id}
           name={category.name}
           icon={category.icon}
@@ -36,4 +41,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default CustomCategoriesList;

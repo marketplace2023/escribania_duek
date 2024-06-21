@@ -1,18 +1,26 @@
-const Step = ({ number, title, description }) => {
+interface StepProps {
+  number: number | string;
+  title: string;
+  description: string;
+}
+
+const Step: React.FC<StepProps> = ({ number, title, description }) => {
   return (
-    <div className="flex flex-col items-center text-center">
-      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-main text-white">
-        {number}
+    <div className="container">
+      <div className="flex flex-col items-center text-center mx-4">
+        <div className="rounded-full bg-white border border-gray-500 w-10 h-10 flex items-center justify-center text-main font-bold mb-2">
+          {number}
+        </div>
+        <h3 className="font-bold">{title}</h3>
+        <p className="text-black ">{description}</p>
       </div>
-      <h3 className="mt-2 text-lg font-semibold">{title}</h3>
-      <p className="mt-1 text-sm text-black">{description}</p>
     </div>
   );
 };
 
 const StepFlow = () => {
   return (
-    <div className="flex justify-between py-8">
+    <div className="flex flex-col md:flex-row justify-center items-center md:justify-between p-8 ">
       <Step
         number="1"
         title="Elige un producto"
