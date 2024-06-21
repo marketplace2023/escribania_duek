@@ -1,24 +1,29 @@
-import { FaMugHot, FaTshirt, FaHatCowboy, FaClipboard } from "react-icons/fa";
+import { Button } from "@/modules/shared/components/ui/button";
+
 const CustomCard = () => {
   return (
     <>
-      <div className=" w-full">
-        <div className="flex flex-col items-center justify-center bg-main text-white h-screen">
-          <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold mb-2">
-              Crea tus productos personalizados
+      <div className="w-1/2">
+        <div className="container w-full bg-main text-white h-screen flex items-center justify-center">
+          <div className="text-container mt-2">
+            <h1 className="text-4xl font-bold mb-4">
+              Convierte tus ideas en productos premium y comienza a vender en
+              minutos.
             </h1>
-            <h2 className="text-4xl font-bold">Online</h2>
+            <h2 className="text-xl mb-4">Pesonaliza más de 300 productos.</h2>
+            <h2 className="text-xl">
+              Tus clientes sólo tienen que hacer sus pedidos en nuestra tienda.
+              Nosotros procesamos y enviamos los productos bajo tu marca.
+            </h2>
+            <div className="flex items-center space-x-2 mt-6">
+              <Button className="bg-main text-white font-bold py-2 px-4 rounded-l-full hover:bg-main">
+                Comprar
+              </Button>
+              <Button className="bg-white text-black font-bold py-2 px-4 border border-main rounded-r-full hover:bg-gray-100">
+                Vender
+              </Button>
+            </div>
           </div>
-          <div className="flex space-x-6 mb-6">
-            <FaMugHot className="text-5xl" />
-            <FaHatCowboy className="text-5xl" />
-            <FaTshirt className="text-5xl" />
-            <FaClipboard className="text-5xl" />
-          </div>
-          <button className="bg-white text-black py-2 px-4 rounded">
-            Ver Productos
-          </button>
         </div>
       </div>
     </>

@@ -20,11 +20,7 @@
     "clsx": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-icons": "^5.2.1",
-=======
-    "react-hook-form": "^7.52.0",
->>>>>>> 4fa240ea8a0d5c6648d7339e08d00e05b4dd9a9b
     "react-router-dom": "^6.23.1",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",

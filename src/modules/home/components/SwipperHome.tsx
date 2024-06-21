@@ -6,11 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
-import CustomCard from "./CustomCard";
 const SwipperHome = () => {
   return (
     <div className="flex">
-      <CustomCard />
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <div className="image">
