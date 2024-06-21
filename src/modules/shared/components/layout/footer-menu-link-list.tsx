@@ -7,7 +7,7 @@ export interface FooterMenuLinkListProps {
 
 const FooterMenuLinkList = ({ title, items }: FooterMenuLinkListProps) => {
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-4 first-of-type:pl-0 last-of-type:pr-0">
       <p className="text-primary text-lg font-bold">{title}</p>
       <ul>
         {items.map((item, i) => (
