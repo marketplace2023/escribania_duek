@@ -7,7 +7,7 @@ const ProductCard = () => {
       className="rounded-md p-3 shadow-md border border-gray-100 space-y-3"
     >
       <img
-        src="https://http2.mlstatic.com/D_Q_NP_2X_801762-MLV54230215565_032023-E.webp"
+        src="https://http2.mlstatic.com/D_Q_NP_2X_829078-MLV49591645208_042022-E.webp"
         alt=""
         className="w-full aspect-square object-contain object-center rounded-md"
       />
