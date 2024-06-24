@@ -25,10 +25,6 @@
     "qs": "^6.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-=======
-    "react-hook-form": "^7.52.0",
->>>>>>> 84a0a7fa6966769de4ac7fea52c3664b560ce4e3
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
     "swiper": "^11.1.4",
