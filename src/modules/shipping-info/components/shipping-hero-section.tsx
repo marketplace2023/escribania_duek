@@ -18,10 +18,10 @@ const ShippingHeroSection = ({
             Seguros y a tiempo
           </h2>
           <p>
-            Reunimos todos los servicios logísticos en una misma
-            plataforma, simplificando los costos y agilizando tus tiempos. Somos
-            la solución tecnológica que estabas esperando para que la gestión de
-            tu Tienda escale al próximo nivel.
+            Reunimos todos los servicios logísticos en una misma plataforma,
+            simplificando los costos y agilizando tus tiempos. Somos la solución
+            tecnológica que estabas esperando para que la gestión de tu Tienda
+            escale al próximo nivel.
           </p>
           <Button>Solicitar envios</Button>
         </div>
