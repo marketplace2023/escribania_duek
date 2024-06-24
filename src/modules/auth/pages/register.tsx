@@ -1,19 +1,19 @@
+import { Button } from "@/modules/shared/components/ui/button";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from "@/modules/shared/components/ui/tabs";
-import AuthTitleSection from "../components/ui/auth-title-section";
-import { Button } from "@/modules/shared/components/ui/button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import RegisterForm from "../components/forms/register-form";
 import { Link } from "react-router-dom";
-import LoginForm from "../components/forms/login-form";
+import AuthTitleSection from "../components/ui/auth-title-section";
 
-const Login = () => {
+const Register = () => {
   return (
     <>
-      <AuthTitleSection title="Iniciar sesión" />
+      <AuthTitleSection title="Regístrate" />
 
       <Tabs defaultValue="customer">
         <div className="flex justify-between mb-3">
@@ -27,7 +27,7 @@ const Login = () => {
           </TabsList>
         </div>
         <TabsContent value="customer">
-          <LoginForm />
+          <RegisterForm />
         </TabsContent>
 
         <TabsContent value="store">
@@ -36,13 +36,13 @@ const Login = () => {
       </Tabs>
 
       <p className="text-xs">
-        ¿No tienes una cuenta?{" "}
-        <Link to="/registro" className="text-primary font-semibold">
-          Registrate
+        ¿Ya tienes una cuenta?{" "}
+        <Link to="/login" className="text-primary font-semibold">
+          Iniciar sesión
         </Link>
       </p>
     </>
   );
 };
 
-export default Login;
+export default Register;
