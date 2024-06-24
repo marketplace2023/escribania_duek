@@ -3,7 +3,7 @@ import { Button } from "@/modules/shared/components/ui/button";
 const CustomCard = () => {
   return (
     <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-      <div className="w-full bg-main text-white h-80 lg:h-screen flex items-center justify-center">
+      <div className="w-full text-white flex items-center justify-center py-20">
         <div className="text-container p-4">
           <h1 className="text-2xl lg:text-4xl font-bold mb-4">
             Convierte tus ideas en productos premium y comienza a vender en

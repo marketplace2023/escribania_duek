@@ -7,7 +7,7 @@ SwiperCore.use([Navigation]);
 
 const SwipperStores = () => {
   return (
-    <div className="w-full h-full text-white p-5 mb-10 relative">
+    <div className="w-full h-full text-white py-5 mb-10 relative">
       <div className="container">
         <Swiper
           spaceBetween={20}

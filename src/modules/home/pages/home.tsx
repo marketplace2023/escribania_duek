@@ -23,9 +23,17 @@ const Home = () => {
         <SwipperCategories />
       </div>
       {/* Banner y Categorias*/}
-      <div className="container flex flex-col lg:flex-row mt-8">
-        <CustomCard />
-        <CustomCategorites />
+      <div
+        className=""
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg, #8725E8 50%, rgba(255,255,255,1) 50%)",
+        }}
+      >
+        <div className="container flex flex-col lg:flex-row">
+          <CustomCard />
+          <CustomCategorites />
+        </div>
       </div>
       {/* Tiendas Destacadas */}
       <div className="container mt-8">
@@ -46,21 +54,21 @@ const Home = () => {
       </div>
 
       {/* Ofertas Picantes*/}
-      <div className="container bg-main min-h-screen bg-cover bg-center bg-no-repeat">
-        <div className="flex justify-between">
-          <p className="font-bold text-2xl text-white mt-10">
-            Ofertas Picantes
-          </p>
-          <Button className="bg-white text-black mt-10">Ver Todas</Button>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {Array(8)
-            .fill(0)
-            .map((_, index) => (
-              <div key={index} className="mt-10 mb-8">
-                <CardProduct />
-              </div>
-            ))}
+      <div className="bg-main py-16">
+        <div className="container bg-cover bg-center bg-no-repeat">
+          <div className="flex justify-between mb-8">
+            <p className="font-bold text-2xl text-white">Ofertas Picantes</p>
+            <Button className="bg-white text-black">Ver Todas</Button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {Array(8)
+              .fill(0)
+              .map((_, index) => (
+                <div key={index}>
+                  <CardProduct key={index} />
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </>

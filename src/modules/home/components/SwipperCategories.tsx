@@ -11,11 +11,14 @@ SwiperCore.use([Navigation]);
 const SwipperCategories = () => {
   return (
     <div className="bg-black w-full h-full text-white p-5 relative py-16">
-      <div className="container relative">
-        <h2 className="font-bold text-2xl mb-5">Categorías destacadas</h2>
-        <Button className="absolute top-0 right-5 bg-white text-black py-2 px-4">
-          Ver Todos
-        </Button>
+      <div className="container">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="font-bold text-2xl mb-5">Categorías destacadas</h2>
+          <Button className="top-0 right-5 bg-white text-black py-2 px-4">
+            Ver Todos
+          </Button>
+        </div>
+
         <Swiper
           spaceBetween={20}
           slidesPerView={4} //

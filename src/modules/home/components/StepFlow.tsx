@@ -6,7 +6,7 @@ interface StepProps {
 
 const Step: React.FC<StepProps> = ({ number, title, description }) => {
   return (
-    <div className="container">
+    <div className="px-3">
       <div className="flex flex-col items-center text-center mx-4">
         <div className="rounded-full bg-white border border-gray-500 w-10 h-10 flex items-center justify-center text-main font-bold mb-2">
           {number}
@@ -20,7 +20,7 @@ const Step: React.FC<StepProps> = ({ number, title, description }) => {
 
 const StepFlow = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center md:justify-between p-8 ">
+    <div className="flex flex-col md:flex-row justify-center items-center md:justify-between py-10">
       <Step
         number="1"
         title="Elige un producto"
