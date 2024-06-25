@@ -1,6 +1,27 @@
 import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { cn } from "@/modules/shared/lib";
+import { useCallback } from "react";
+
+interface FavoriteButtonProps {
+  className?: string;
+  onClick?: () => void;
+}
+
+const FavoriteButton = ({ className, onClick }: FavoriteButtonProps) => (
+  <button
+    type="button"
+    className={className}
+    onClick={useCallback(
+      (e: React.SyntheticEvent) => {
+        e.preventDefault();
+      },
+      [onClick]
+    )}
+  >
+    <FaRegHeart className="text-xl" />
+  </button>
+);
 
 interface ProductCardProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
@@ -24,11 +45,7 @@ const ProductCard = ({ horizontal = false }: ProductCardProps) => {
         className="w-full aspect-square object-contain object-center rounded-md"
       />
 
-      {!horizontal && (
-        <button className="absolute top-3 right-3">
-          <FaRegHeart className="text-xl" />
-        </button>
-      )}
+      {!horizontal && <FavoriteButton className="absolute top-3 right-3" />}
 
       <div className="space-y-2">
         <p className="text-md">Mochila estampada</p>
@@ -40,9 +57,7 @@ const ProductCard = ({ horizontal = false }: ProductCardProps) => {
 
       {horizontal && (
         <div className="flex items-center justify-center">
-          <button className="">
-            <FaRegHeart className="text-xl" />
-          </button>
+          <FavoriteButton />
         </div>
       )}
     </Link>
