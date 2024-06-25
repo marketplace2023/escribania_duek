@@ -1,3 +1,5 @@
+import React from "react";
+
 interface StepProps {
   number: number | string;
   title: string;
@@ -12,30 +14,28 @@ const Step: React.FC<StepProps> = ({ number, title, description }) => {
           {number}
         </div>
         <h3 className="font-bold">{title}</h3>
-        <p className="text-black ">{description}</p>
+        <p className="text-black">{description}</p>
       </div>
     </div>
   );
 };
 
-const StepFlow = () => {
+interface StepFlowProps {
+  steps: StepProps[];
+}
+
+const StepFlow: React.FC<StepFlowProps> = ({ steps = [] }) => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center md:justify-between py-10">
-      <Step
-        number="1"
-        title="Elige un producto"
-        description="Encuentra en nuestra tienda el producto que quieras personalizar"
-      />
-      <Step
-        number="2"
-        title="Sube tu logo"
-        description="Utilizando nuestra herramienta integrada en la web, cargas tu logo y se aplica automáticamente a tu producto elegido"
-      />
-      <Step
-        number="3"
-        title="Elige un producto"
-        description="Encuentra en nuestra tienda el producto que quieras personalizar"
-      />
+    <div className="grid grid-cols-3 md:flex-row justify-center items-center md:justify-between py-10">
+      {Array.isArray(steps) &&
+        steps.map((step, index) => (
+          <Step
+            key={index}
+            number={step.number}
+            title={step.title}
+            description={step.description}
+          />
+        ))}
     </div>
   );
 };

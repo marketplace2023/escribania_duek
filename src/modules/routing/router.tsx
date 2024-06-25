@@ -11,6 +11,7 @@ import Login from "../auth/pages/login";
 import GuestOnlyRoute from "./components/guest-only-route";
 import ShippingInfo from "../shipping-info/pages/shipping-info";
 import Products from "../products/pages/products";
+import DesignIdeas from "../design-ideas/pages/designideas";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ export const router = createBrowserRouter(
         <Route path="" element={<Home />} />
         <Route path="/envios" element={<ShippingInfo />} />
         <Route path="/comprar" element={<Products />} />
+        <Route path="/ideas-de-diseno" element={<DesignIdeas />} />
 
         <Route path="" element={<AuthLayout />}>
           <Route path="registro" element={<Register />} />
