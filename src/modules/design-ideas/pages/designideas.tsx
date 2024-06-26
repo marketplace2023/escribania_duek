@@ -2,11 +2,11 @@ import StepFlow from "@/modules/home/components/StepFlow";
 import SwipperHome from "@/modules/home/components/SwipperHome";
 import { stepsideasData } from "@/modules/home/data/steepsdata";
 import Advertisements from "../components/advertisements";
-import Imagepreview from "../components/imagepreview";
-import ImageSteps from "../components/imagesteps";
+import Imagepreview from "../components/image-preview";
+import ImageSteps from "../components/image-steps";
 import CustomCard from "@/modules/home/components/CustomCard";
 import FrequentQuestions from "../components/frequent-questions";
-import ProductPreview from "../components/product-preview";
+import Gallery from "../components/gallery";
 
 const DesignIdeas = () => {
   return (
@@ -22,7 +22,7 @@ const DesignIdeas = () => {
         <Imagepreview />
       </div>
       <div>
-        <ProductPreview />
+        <Gallery />
       </div>
       <div className="container">
         <h2 className=" text-2xl text-center font-bold">
