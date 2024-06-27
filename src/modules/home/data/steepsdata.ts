@@ -38,3 +38,9 @@ export const stepsideasData = [
       "Una vez hagas tu pedido, lo gestionaremos y enviaremos para que lo recibas en cualquier parte del mundo",
   },
 ];
+
+export const priceData = [
+  { minUnits: 100, maxUnits: 999, price: 4.2, highlight: false },
+  { minUnits: 1000, maxUnits: 5000, price: 3.5, highlight: false },
+  { minUnits: 5000, maxUnits: 100000, price: 3.5, highlight: true },
+];

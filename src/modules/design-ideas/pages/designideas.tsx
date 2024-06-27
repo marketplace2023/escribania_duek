@@ -6,7 +6,7 @@ import Imagepreview from "../components/image-preview";
 import ImageSteps from "../components/image-steps";
 import CustomCard from "@/modules/home/components/CustomCard";
 import FrequentQuestions from "../components/frequent-questions";
-import Gallery from "../components/gallery";
+import SliderPreview from "../components/slider-preview";
 
 const DesignIdeas = () => {
   return (
@@ -21,11 +21,11 @@ const DesignIdeas = () => {
         <Advertisements />
         <Imagepreview />
       </div>
-      <div>
-        <Gallery />
+      <div className="container">
+        <SliderPreview />
       </div>
       <div className="container">
-        <h2 className=" text-2xl text-center font-bold">
+        <h2 className=" text-2xl text-center font-bold mt-10 mb-10 p-6">
           ¡Atrévete a personalizar regalos y sorprende a tus seres queridos!
         </h2>
         <ImageSteps />
