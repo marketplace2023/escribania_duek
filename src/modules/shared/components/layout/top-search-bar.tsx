@@ -12,13 +12,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/modules/shared/components/ui/dropdown-menu";
+import { Link } from "react-router-dom";
 
 const TopSearchBar = () => {
   const { isAuthenticated, logout } = useAuth();
 
   return (
     <div className="flex flex-shrink-0 items-center h-16 relative">
-      <img src={logoWithText} alt="Tu estampa" className="h-10" />
+      <Link to="/">
+        <img src={logoWithText} alt="Tu estampa" className="h-10" />
+      </Link>
 
       <Input
         className="w-[600px] absolute left-1/2 transform -translate-x-1/2"
