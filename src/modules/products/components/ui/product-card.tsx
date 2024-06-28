@@ -37,7 +37,7 @@ const ProductCard = ({
     <Link
       to="/producto/id"
       className={cn(
-        "relative rounded-md p-3 shadow-md border border-gray-100 space-y-3",
+        "relative rounded-md p-3 shadow-md border border-gray-100 space-y-3 bg-white",
         {
           "grid grid-cols-[180px_1fr_40px]": horizontal,
         }
