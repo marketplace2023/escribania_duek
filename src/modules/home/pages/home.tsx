@@ -4,9 +4,9 @@ import CustomCategorites from "../components/CustomCategorites";
 import SwipperCategories from "../components/SwipperCategories";
 import SwipperHome from "../components/SwipperHome";
 import SwipperStores from "../components/SwipperStores";
-import CardProduct from "../components/CardProduct";
 import { stepsData } from "../data/steepsdata";
 import StepFlow from "../components/StepFlow";
+import ProductCard from "@/modules/products/components/ui/product-card";
 
 const Home = () => {
   return (
@@ -69,9 +69,7 @@ const Home = () => {
             {Array(8)
               .fill(0)
               .map((_, index) => (
-                <div key={index}>
-                  <CardProduct key={index} />
-                </div>
+                <ProductCard key={index} discountedPrice={88.99} />
               ))}
           </div>
         </div>

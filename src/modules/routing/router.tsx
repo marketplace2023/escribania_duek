@@ -14,6 +14,7 @@ import Products from "../products/pages/products";
 import DesignIdeas from "../design-ideas/pages/designideas";
 import ProductDetail from "../products/[id]/id";
 import CustomizeOrder from "../products/[id]/customize-order";
+import ProductsOffers from "../products/pages/products-offers";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ export const router = createBrowserRouter(
       <Route path="/" element={<AppLayout />}>
         <Route path="" element={<Home />} />
         <Route path="/envios" element={<ShippingInfo />} />
+        <Route path="/ofertas" element={<ProductsOffers />} />
         <Route path="/comprar" element={<Products />} />
         <Route path="/producto/:id" element={<ProductDetail />} />
         <Route
