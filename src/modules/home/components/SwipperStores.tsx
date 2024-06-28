@@ -32,7 +32,7 @@ const SwipperStores = () => {
           }}
           navigation={true}
           modules={[Navigation]}
-          className="mySwiper"
+          className="mySwiper py-6"
         >
           {Array(5)
             .fill(0)
