@@ -15,7 +15,7 @@ const ProductCustomizacion = () => {
             <Button className="bg-main text-white">Impresión DTG</Button>
             <Button className="bg-white border text-black">Sublimado</Button>
           </div>
-          <Link to="/product/id/customize-order">
+          <Link to="/producto/id/personalizacion">
             <Button className="bg-black text-white mt-4">
               Continuar con la compra
             </Button>

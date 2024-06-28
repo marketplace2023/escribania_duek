@@ -10,7 +10,7 @@ interface ProductCardProps
 const ProductCard = ({ horizontal = false }: ProductCardProps) => {
   return (
     <Link
-      to="/product/id"
+      to="/producto/id"
       className={cn(
         "relative rounded-md p-3 shadow-md border border-gray-100 space-y-3",
         {
