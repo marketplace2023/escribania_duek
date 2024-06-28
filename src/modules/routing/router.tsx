@@ -13,6 +13,7 @@ import ShippingInfo from "../shipping-info/pages/shipping-info";
 import Products from "../products/pages/products";
 import DesignIdeas from "../design-ideas/pages/designideas";
 import ProductDetail from "../products/[id]/id";
+import CustomizeOrder from "../products/[id]/customize-order";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,10 @@ export const router = createBrowserRouter(
         <Route path="/envios" element={<ShippingInfo />} />
         <Route path="/comprar" element={<Products />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route
+          path="/product/:id/customize-order"
+          element={<CustomizeOrder />}
+        />
         <Route path="/ideas-de-diseno" element={<DesignIdeas />} />
 
         <Route path="" element={<AuthLayout />}>

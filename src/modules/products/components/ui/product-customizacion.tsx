@@ -1,4 +1,5 @@
 import { Button } from "@/modules/shared/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ProductCustomizacion = () => {
   return (
@@ -14,9 +15,11 @@ const ProductCustomizacion = () => {
             <Button className="bg-main text-white">Impresión DTG</Button>
             <Button className="bg-white border text-black">Sublimado</Button>
           </div>
-          <Button className="bg-black text-white mt-4">
-            Continuar con la compra
-          </Button>
+          <Link to="/product/id/customize-order">
+            <Button className="bg-black text-white mt-4">
+              Continuar con la compra
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
