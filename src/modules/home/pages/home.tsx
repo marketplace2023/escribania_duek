@@ -1,11 +1,12 @@
 import { Button } from "@/modules/shared/components/ui/button";
 import CustomCard from "../components/CustomCard";
 import CustomCategorites from "../components/CustomCategorites";
-import StepFlow from "../components/StepFlow";
 import SwipperCategories from "../components/SwipperCategories";
 import SwipperHome from "../components/SwipperHome";
 import SwipperStores from "../components/SwipperStores";
 import CardProduct from "../components/CardProduct";
+import { stepsData } from "../data/steepsdata";
+import StepFlow from "../components/StepFlow";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
       </div>
       {/* Instrucciones*/}
       <div className="container">
-        <StepFlow />
+        <StepFlow steps={stepsData} />
       </div>
       {/* Slider Categorias*/}
       <div>
@@ -31,7 +32,11 @@ const Home = () => {
         }}
       >
         <div className="container flex flex-col lg:flex-row">
-          <CustomCard />
+          <CustomCard
+            title="Convierte tus ideas en productos premium y comienza a vender en minutos."
+            parraph="Personaliza más de 300 productos."
+            text="Tus clientes sólo tienen que hacer sus pedidos en nuestra tienda. Nosotros procesamos y enviamos los productos bajo tu marca."
+          />
           <CustomCategorites />
         </div>
       </div>
