@@ -1,7 +1,7 @@
 import logoWithText from "@/assets/logo_with_text.png";
 import { useAuth } from "@/modules/auth/context/auth-context";
 import { Input } from "@/modules/shared/components/ui/input";
-import { IoMdCart } from "react-icons/io";
+import { IoMdCart, IoMdLogIn } from "react-icons/io";
 import { IoMdNotifications } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 import {
@@ -28,29 +28,35 @@ const TopSearchBar = () => {
         placeholder="¿Qué estás buscando?"
       />
 
-      {isAuthenticated && (
-        <div className="ml-auto flex items-center space-x-2">
-          <IoMdCart className="text-primary text-2xl" />
-          <IoMdNotifications className="text-primary text-2xl" />
+      <div className="ml-auto flex items-center space-x-2">
+        {isAuthenticated ? (
+          <>
+            <IoMdCart className="text-primary text-2xl" />
+            <IoMdNotifications className="text-primary text-2xl" />
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button>
-                <FaUserCircle className="text-primary text-2xl" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-40">
-              <DropdownMenuLabel>Mi cuenta</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Perfil</DropdownMenuItem>
-              <DropdownMenuItem>Facturación</DropdownMenuItem>
-              <DropdownMenuItem onSelect={logout}>
-                Cerrar Sesión
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      )}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button>
+                  <FaUserCircle className="text-primary text-2xl" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-40">
+                <DropdownMenuLabel>Mi cuenta</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Perfil</DropdownMenuItem>
+                <DropdownMenuItem>Facturación</DropdownMenuItem>
+                <DropdownMenuItem onSelect={logout}>
+                  Cerrar Sesión
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </>
+        ) : (
+          <Link to="login">
+            <IoMdLogIn className="text-primary text-2xl" />
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
