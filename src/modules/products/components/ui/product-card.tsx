@@ -26,9 +26,13 @@ const FavoriteButton = ({ className, onClick }: FavoriteButtonProps) => (
 interface ProductCardProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
   horizontal?: boolean;
+  discountedPrice?: number;
 }
 
-const ProductCard = ({ horizontal = false }: ProductCardProps) => {
+const ProductCard = ({
+  horizontal = false,
+  discountedPrice,
+}: ProductCardProps) => {
   return (
     <Link
       to="/producto/id"
@@ -50,8 +54,22 @@ const ProductCard = ({ horizontal = false }: ProductCardProps) => {
       <div className="space-y-2">
         <p className="text-md">Mochila estampada</p>
 
-        <div className="flex items-center justify-between">
-          <span className="text-xl font-semibold">$99.99</span>
+        <div className="flex items-center justify-between space-x-3">
+          <span
+            className={cn("text-xl font-semibold", {
+              "text-xs": !!discountedPrice,
+            })}
+          >
+            {discountedPrice && <span className="mr-1">Antes</span>}
+            <span className={cn(discountedPrice && "line-through")}>
+              $99.99
+            </span>
+          </span>
+          {discountedPrice && (
+            <span className="text-xl font-semibold text-primary">
+              Ahora ${discountedPrice}
+            </span>
+          )}
         </div>
       </div>
 
