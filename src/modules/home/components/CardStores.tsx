@@ -1,29 +1,28 @@
 import logo from "@/assets/tienda-logo.png";
 import banner from "@/assets/tienda-banner.jpg";
+import { cn } from "@/modules/shared/lib";
+import { Button } from "@/modules/shared/components/ui/button";
+
 const CardStores = () => {
   return (
     <div className="max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       <div className="relative">
-        <img className="w-full h-25 object-cover" src={banner} />
+        <img className="w-full h-28 object-cover" src={banner} />
         <div className="absolute inset-0 bg-gradient-to-t from-black opacity-25"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <img
-            className="w-12 h-12 rounded-sm bg-white p-1"
-            src={logo}
-            alt=""
-          />
-        </div>
+        <img
+          className={cn(
+            "absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2",
+            "w-16 h-16",
+            "rounded-sm bg-white p-1 shadow-md"
+          )}
+          src={logo}
+          alt=""
+        />
       </div>
-      <div className="p-4">
-        <h3 className="text-lg text-black font-semibold text-center">CASH</h3>
-        <h3 className=" text-base text-black font-semibold text-center">
-          Categoria
-        </h3>
-        <p className="text-red-500 text-center">La tienda no tiene productos</p>
+      <div className="p-4 pt-12">
+        <h3 className="text-lg text-black font-semibold text-center">Zara</h3>
         <div className="mt-4 text-center">
-          <a href="#" className="text-main hover:underline">
-            Ver Tienda
-          </a>
+          <Button size="sm">Ir a la Tienda</Button>
         </div>
       </div>
     </div>
