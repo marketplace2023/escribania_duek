@@ -15,6 +15,9 @@ import DesignIdeas from "../design-ideas/pages/designideas";
 import ProductDetail from "../products/[id]/id";
 import CustomizeOrder from "../products/[id]/customize-order";
 import ProductsOffers from "../products/pages/products-offers";
+import Profile from "../my-account/pages/profile/profile";
+import MyAccountLayout from "../my-account/components/layout/my-account-layout";
+import ProtectedRoute from "./components/protected-route";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +33,13 @@ export const router = createBrowserRouter(
           element={<CustomizeOrder />}
         />
         <Route path="/ideas-de-diseno" element={<DesignIdeas />} />
+
+        <Route
+          path="/mi-cuenta"
+          element={<ProtectedRoute element={<MyAccountLayout />} />}
+        >
+          <Route path="perfil" element={<Profile />} />
+        </Route>
 
         <Route path="" element={<AuthLayout />}>
           <Route path="registro" element={<Register />} />
