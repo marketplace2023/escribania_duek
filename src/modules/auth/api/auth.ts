@@ -17,9 +17,10 @@ export async function login(data: LoginFormSchema): Promise<AuthInfo> {
   return {
     token: resData.accessToken,
     user: {
-      id: "the_id",
+      id: "97c6a3bf-eb52-46d5-8cb9-c2a3c32a118d",
       email: data.email,
-      name: "The name",
+      firstName: "Alexis",
+      lastName: "Navarro",
     },
   };
 }

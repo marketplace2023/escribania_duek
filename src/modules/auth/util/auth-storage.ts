@@ -1,6 +1,6 @@
 import { AuthInfo } from "../dtos/auth-info";
 
-const AUTH_KEY = "tu-estampa-web-auth";
+const AUTH_KEY = "tu-estampa-web-auth@1.0.0";
 
 export function getAuth(): AuthInfo | null {
   const data = localStorage.getItem(AUTH_KEY);
