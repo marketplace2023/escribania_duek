@@ -43,7 +43,11 @@ const TopSearchBar = () => {
               <DropdownMenuContent align="end" className="w-40">
                 <DropdownMenuLabel>Mi cuenta</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Perfil</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/mi-cuenta/perfil" className="w-full">
+                    Perfil
+                  </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem>Facturación</DropdownMenuItem>
                 <DropdownMenuItem onSelect={logout}>
                   Cerrar Sesión
