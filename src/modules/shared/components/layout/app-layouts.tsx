@@ -1,21 +1,18 @@
 import { Outlet } from "react-router-dom";
 import TopNavigationBar from "./top-navigation-bar";
-import TopSearchBar from "./top-search-bar";
-import FooterMenu from "./footer-menu";
+import Footer from "./footer";
 
 const AppLayout = () => {
   return (
     <div className="inter-400">
       <div className="container">
-        <TopSearchBar />
-
         <TopNavigationBar />
       </div>
 
       <Outlet />
 
       <div className="container">
-        <FooterMenu />
+        <Footer />
       </div>
     </div>
   );
